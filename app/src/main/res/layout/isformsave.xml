@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="@dimen/x470"
+        android:layout_height="wrap_content"
+        android:background="@drawable/isformsave_background">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="提示"
+            android:textColor="#404040"
+            android:textSize="@dimen/x32"
+            android:layout_marginTop="@dimen/y42"/>
+
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/y28"
+            android:layout_marginBottom="@dimen/y28"
+            android:text="申请表内容已经更新，是否提交最新内容?"
+            android:lineSpacingExtra="@dimen/y16"
+            android:gravity="center"
+            android:textColor="#808080"
+            android:textSize="@dimen/x26" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearButtons"
+        android:layout_width="@dimen/x470"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y84"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/isfromsave_no"
+            android:gravity="center"
+            android:text="否"
+            android:textSize="@dimen/x30"
+            android:textColor="@color/beforeTextColorGray" />
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y84"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/isformsave_yes"
+            android:gravity="center"
+            android:text="是"
+            android:textSize="@dimen/x30"
+            android:textColor="@color/colorFlagship" />
+
+    </LinearLayout>
+</RelativeLayout>

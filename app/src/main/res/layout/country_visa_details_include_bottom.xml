@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 考虑到scrollView中使用listview会有item显示不全，所以此处就使用原生的listView，在代码中去计算listView的高度，从而修复显示不全的问题-->
+<com.usamsl.global.view.MyListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    android:background="#f5f5f5"
+    android:divider="#00000000"
+    android:dividerHeight="@dimen/y30"/>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y100"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/x28"
+    android:paddingRight="@dimen/x28"
+    android:paddingTop="@dimen/x24"
+    android:paddingBottom="@dimen/x8"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/tab"
+    android:gravity="center_vertical"
+    >
+
+    <RadioButton
+        android:id="@+id/rb_index"
+        style="@style/indexMenu"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:checked="true"/>
+
+    <RadioButton
+        android:id="@+id/rb_order"
+        style="@style/orderMenu"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:clickable="false" />
+
+    <RadioButton
+        android:id="@+id/rb_service"
+        style="@style/serviceMenu"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <RadioButton
+        android:id="@+id/rb_my"
+        style="@style/myMenu"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</RadioGroup>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/dialog_Group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"></LinearLayout>
+    <Button
+        android:id="@+id/btn_pos"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x72"
+        android:text="确定"
+        android:textSize="@dimen/x28"
+        android:textColor="@color/White"
+        android:background="@drawable/dialog_btn_bg"
+        />
+
+</LinearLayout>

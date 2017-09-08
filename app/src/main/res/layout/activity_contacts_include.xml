@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/x30"
+    android:paddingRight="@dimen/x30">
+   <RelativeLayout
+       android:id="@+id/rl_new"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="@dimen/y86"
+           android:id="@+id/imgPoint1"
+           android:src="@drawable/up"
+           />
+       <TextView
+           android:id="@+id/tv_newContacts"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/y86"
+           android:layout_toRightOf="@id/imgPoint1"
+           android:layout_marginLeft="@dimen/x6"
+           android:gravity="center_vertical"
+           android:text="新建签证申请人"
+           android:textColor="@color/colorText"
+           android:textSize="13sp" />
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_newContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_new"
+        android:background="@drawable/contacts_new_bg"
+        android:paddingLeft="@dimen/x20"
+        android:paddingRight="@dimen/x20"
+        android:paddingTop="@dimen/x2">
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60"
+            android:background="@drawable/contacts_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/name_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:text="中文姓名"
+                android:textColor="#737373"
+                android:textSize="@dimen/x22" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x14"
+                android:layout_toRightOf="@id/name_hint"
+                android:background="@null"
+                android:hint="请输入"
+                android:textColor="#737373"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColorHint="@color/colorLine"
+                android:textSize="@dimen/x22" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_tel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x62"
+            android:layout_below="@id/rl_name"
+            android:background="@drawable/contacts_bg">
+
+            <TextView
+                android:id="@+id/tel_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:text="联系电话"
+                android:textColor="#737373"
+                android:textSize="@dimen/x22" />
+
+            <EditText
+                android:id="@+id/et_tel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x14"
+                android:layout_toRightOf="@id/tel_hint"
+                android:background="@null"
+                android:hint="请输入"
+                android:inputType="number"
+                android:textColor="#737373"
+                android:textColorHint="@color/colorLine"
+                android:textSize="@dimen/x22"
+                android:ellipsize="end"
+                android:maxLength="11"
+                android:lines="1"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x62"
+            android:layout_below="@id/rl_tel"
+            android:background="@drawable/contacts_bg">
+
+            <TextView
+                android:id="@+id/email_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:text="常用邮箱"
+                android:textColor="#737373"
+                android:textSize="@dimen/x22" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x14"
+                android:layout_toRightOf="@id/email_hint"
+                android:background="@null"
+                android:hint="请输入"
+                android:inputType="text"
+                android:textColor="#737373"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColorHint="@color/colorLine"
+                android:textSize="@dimen/x22" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_time"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x62"
+            android:layout_below="@id/rl_email"
+            android:background="@drawable/contacts_bg">
+
+            <TextView
+                android:id="@+id/tv_time_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="近期出行时间"
+                android:textColor="#737373"
+                android:textSize="@dimen/x22" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x14"
+                android:layout_toRightOf="@id/tv_time_hint"
+                android:textColor="#737373"
+                android:textSize="@dimen/x22" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_returnTime"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x62"
+            android:layout_below="@id/rl_time">
+
+            <TextView
+                android:id="@+id/tv_returnTime_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="预计返回时间"
+                android:textColor="#737373"
+                android:textSize="@dimen/x22" />
+
+            <TextView
+                android:id="@+id/tv_returnTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x14"
+                android:layout_toRightOf="@id/tv_returnTime_hint"
+                android:textColor="#737373"
+                android:textSize="@dimen/x22" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

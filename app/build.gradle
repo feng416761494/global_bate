@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        android_global {
+            keyAlias '智能全球签'
+            keyPassword 'usamsl2016'
+            storeFile file('msl.jks')
+            storePassword 'usamsl2016'
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "6g"
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.usamsl.global"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 15
+        versionName "1.5.0"
+        multiDexEnabled true
+        //极光推送
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "com.usamsl.global",
+                JPUSH_APPKEY : "23e14a54508bcf625d7e70d7", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.android_global
+            
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.android_global
+        }
+
+
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.android.support:cardview-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile 'com.squareup.okio:okio:1.8.0'
+    compile files('libs/Msc.jar')
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile files('libs/Sunflower.jar')
+    compile files('libs/AMap_Services_V2.4.0.jar')
+    compile files('libs/commons-httpclient-3.1.jar')
+    compile 'com.leqi:safelight:0.9.0'
+    //动态申请权限
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    compile 'io.reactivex:rxjava:1.1.6'
+    //日历
+    compile 'com.squareup:android-times-square:1.6.5@aar'
+    compile files('libs/AMap_Location_V3.3.0_20170118.jar')
+    compile files('libs/Android_2DMapApi_V2.4.1.jar')
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile files('libs/alipaySdk-20161222.jar')
+    compile files('libs/xUtils-2.4.4.jar')
+    compile project(':itemanimatablelistview')
+    compile files('libs/universal-image-loader-1.9.3-SNAPSHOT.jar')
+    compile files('libs/pgyer_sdk_2.5.6.jar')
+    compile files('libs/rebound-0.3.8.jar')
+    compile 'com.github.lzyzsd:jsbridge:1.0.4'
+    compile project(path: ':library')
+    compile files('libs/jcore-android_v1.1.3.jar')
+    compile files('libs/SocialSDK_facebook.jar')
+    compile files('libs/umeng_social_shareboard.jar')
+    compile files('libs/SocialSDK_Sina_Full.jar')
+    compile files('libs/open_sdk_r5788_lite.jar')
+    compile files('libs/SocialSDK_WeiXin_Full.jar')
+    compile files('libs/SocialSDK_QQ_Full.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_tool.jar')
+    compile files('libs/weiboSDKCore.jar')
+    compile files('libs/wechat-sdk-android-with-mta-1.1.6.jar')
+    compile files('libs/umeng_shareboard_widget.jar')
+    compile 'com.jwenfeng.pulltorefresh:library:1.0.3'
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relativeDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x120"
+        android:layout_marginRight="@dimen/x120"
+        android:layout_centerVertical="true"
+        android:background="@drawable/dialog_userinfo_item_bg">
+        <RelativeLayout
+            android:id="@+id/relativeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y76">
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="请选择您的职业"
+                android:textSize="@dimen/x32"
+                android:textColor="#444444"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="#e8e8e8"/>
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/lsvDialogUserInfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y362"
+            android:layout_below="@+id/relativeTitle"
+            android:layout_marginTop="@dimen/y22"
+            android:layout_marginBottom="@dimen/y22"
+            android:divider="@null"
+            android:scrollbars="none"/>
+    </RelativeLayout>
+
+</RelativeLayout>

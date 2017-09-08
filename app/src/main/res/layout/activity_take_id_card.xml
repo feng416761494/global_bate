@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.usamsl.global.index.step.step7.activity.TakeIdCardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x84"
+            android:background="@drawable/bg_title">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x30"
+                android:paddingRight="@dimen/x30"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="身份证"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x30" />
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x30"
+                android:paddingRight="@dimen/x30"
+                android:text="确定"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x26" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_top"
+            android:background="@color/White"
+            android:paddingBottom="@dimen/x20"
+            android:paddingLeft="@dimen/x30"
+            android:paddingTop="@dimen/x20">
+
+            <TextView
+                android:id="@+id/tv_idHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身份信息"
+                android:textColor="#262626"
+                android:textSize="@dimen/x26" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_idHint"
+                android:layout_marginTop="@dimen/x20"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rl1"
+                        android:layout_width="@dimen/x204"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            style="@style/tvIdCard"
+                            android:text="姓名：" />
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            style="@style/etIdCard"
+                            android:layout_toRightOf="@id/tv_name" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl2"
+                        android:layout_width="@dimen/x154"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/rl1">
+
+                        <TextView
+                            android:id="@+id/tv_sex"
+                            style="@style/tvIdCard"
+                            android:text="性别：" />
+
+                        <EditText
+                            android:id="@+id/et_sex"
+                            style="@style/etIdCard"
+                            android:layout_toRightOf="@id/tv_sex"
+                            android:maxLength="1" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/rl2">
+
+                        <TextView
+                            android:id="@+id/tv_folk"
+                            style="@style/tvIdCard"
+                            android:text="民族：" />
+
+                        <EditText
+                            android:id="@+id/et_folk"
+                            style="@style/etIdCard"
+                            android:layout_toRightOf="@id/tv_folk" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10">
+
+                    <TextView
+                        android:id="@+id/tv_birthday"
+                        style="@style/tvIdCard"
+                        android:text="出生日期：" />
+
+                    <EditText
+                        android:id="@+id/et_birthday"
+                        style="@style/etIdCard"
+                        android:layout_toRightOf="@id/tv_birthday" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10">
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        style="@style/tvIdCard"
+                        android:text="住址：" />
+
+                    <EditText
+                        android:id="@+id/et_address"
+                        style="@style/etIdCard"
+                        android:layout_toRightOf="@id/tv_address" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10">
+
+                    <TextView
+                        android:id="@+id/tv_cardno"
+                        style="@style/tvIdCard"
+                        android:text="身份证号：" />
+
+                    <EditText
+                        android:id="@+id/et_cardno"
+                        style="@style/etIdCard"
+                        android:layout_toRightOf="@id/tv_cardno" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10">
+
+                    <TextView
+                        android:id="@+id/tv_issue_authority"
+                        style="@style/tvIdCard"
+                        android:text="签发机关：" />
+
+                    <EditText
+                        android:id="@+id/et_issue_authority"
+                        style="@style/etIdCard"
+                        android:layout_toRightOf="@id/tv_issue_authority" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10">
+
+                    <TextView
+                        android:id="@+id/tv_valid_period"
+                        style="@style/tvIdCard"
+                        android:text="有效日期：" />
+
+                    <EditText
+                        android:id="@+id/et_valid_period"
+                        style="@style/etIdCard"
+                        android:layout_toRightOf="@id/tv_valid_period" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!--<RelativeLayout
+                android:id="@+id/rl_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout"
+                android:layout_marginTop="@dimen/x20"
+                >
+                <RelativeLayout
+                    android:id="@+id/r1"
+                    android:layout_width="@dimen/x252"
+                    android:layout_height="@dimen/x172"
+                    android:background="@drawable/id_card_bg">
+
+                    <ImageView
+                        android:id="@+id/img_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/camera"
+                        android:scaleType="centerInside"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x8"
+                    android:text="身份证正面"
+                    android:layout_below="@id/r1"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_toRightOf="@id/rl_body"
+                android:id="@+id/rl_body1"
+                android:layout_marginTop="@dimen/x20"
+                android:layout_below="@id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/r2"
+                    android:layout_width="@dimen/x252"
+                    android:layout_height="@dimen/x172"
+                    android:layout_marginLeft="@dimen/x48"
+                    android:background="@drawable/id_card_bg">
+                    <ImageView
+                        android:id="@+id/img_photo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/camera"
+                        android:scaleType="centerInside"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x8"
+                    android:text="身份证反面"
+                    android:layout_below="@id/r2"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>-->
+            <GridView
+                android:id="@+id/gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout"
+                android:layout_marginRight="@dimen/x100"
+                android:layout_marginTop="@dimen/x20"
+                android:background="@color/White"
+                android:columnWidth="@dimen/x252"
+                android:gravity="left"
+                android:horizontalSpacing="@dimen/x48"
+                android:listSelector="#00000000"
+                android:numColumns="auto_fit"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/x30" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_head"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginTop="@dimen/x20"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="温馨提示"
+                android:textColor="#262626"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x10"
+                android:layout_marginTop="@dimen/x30"
+                android:text="·拍摄字体清晰可见不要反光"
+                android:textColor="#808080"
+                android:textSize="@dimen/x22" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·如有错误可点击修改"
+                android:textColor="#808080"
+                android:textSize="@dimen/x22" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relativeDialogItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y72">
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="在职人员"
+            android:textSize="@dimen/x26"
+            android:textColor="#7e7e7e"/>
+
+    </RelativeLayout>
+</RelativeLayout>

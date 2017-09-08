@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".index.fragment.IndexFragment">
+
+
+    <com.usamsl.global.index.util.HeadZoomScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:scrollbars="none"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginRight="-150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner" />
+
+            <include layout="@layout/fragment_index_include" />
+        </LinearLayout>
+    </com.usamsl.global.index.util.HeadZoomScrollView>
+    <RelativeLayout
+        android:id="@+id/rl_searchCity"
+        android:layout_width="@dimen/x150"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x54"
+            android:layout_toRightOf="@id/tv"
+            android:layout_marginBottom="@dimen/y20">
+
+            <ImageView
+                android:id="@+id/img_drop_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x30"
+                android:src="@drawable/drop_down" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/img_drop_down"
+                android:text="上海市"
+                android:textColor="@color/White"
+                android:textSize="@dimen/x26" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

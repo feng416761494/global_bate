@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true">
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x28"
+        android:background="@drawable/show_visa_country_item_bg"
+        android:textColor="#8c8c8c"
+        android:textSize="@dimen/x26"
+        android:paddingLeft="@dimen/x30"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        />
+    <TextView
+        android:layout_below="@id/catalog"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/x24"
+        android:paddingLeft="@dimen/x30"
+        android:background="@drawable/show_visa_country_bg"
+        android:lineSpacingExtra="0dp"/>
+
+</RelativeLayout>

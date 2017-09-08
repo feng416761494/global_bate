@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".index.step.step6.activity.PaymentActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x84"
+        android:background="@drawable/bg_title"
+        android:paddingRight="@dimen/x30">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x30"
+            android:paddingRight="@dimen/x30"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="支付方式"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/x30" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_body"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x134"
+        android:layout_below="@id/rl_top"
+        android:background="@color/White"
+        android:paddingLeft="@dimen/x30"
+        android:paddingRight="@dimen/x30">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美国EVUS"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/x26" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_type"
+                android:layout_marginTop="@dimen/x10"
+                android:text="姓名：楚中天"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/x22" />
+
+            <TextView
+                android:id="@+id/tv_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginTop="@dimen/x4"
+                android:text="手机号码：13843838438"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/x22" />
+
+            <TextView
+                android:id="@+id/tv_salary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_tel"
+                android:layout_alignParentRight="true"
+                android:text="￥143"
+                android:textColor="#d78e8e"
+                android:textSize="@dimen/x20" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bodyTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x78"
+        android:layout_below="@id/rl_body"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@color/White">
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x12"
+            android:button="@null"
+            android:checked="false"
+            android:drawableLeft="@drawable/pay_cb_bg" />
+
+        <TextView
+            android:id="@+id/tv_accompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/cb"
+            android:text="是否需要专人陪签"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x22" />
+
+        <TextView
+            android:id="@+id/tv_accompany_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:text="￥143"
+            android:textColor="#d78e8e"
+            android:textSize="@dimen/x20" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bodyMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y78"
+        android:layout_below="@id/rl_bodyTop"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@color/White">
+
+        <CheckBox
+            android:id="@+id/cb_below"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x12"
+            android:button="@null"
+            android:drawableLeft="@drawable/pay_cb_bg" />
+
+        <TextView
+            android:id="@+id/chooseBankHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/cb_below"
+            android:text="请选择银行网点及服务方式"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x22" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/rl_bodyMiddle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/x10"
+        android:paddingTop="@dimen/x10"
+        android:layout_below="@id/rl_bodyMiddle"
+        android:paddingLeft="@dimen/x30"
+        android:background="@drawable/pay_up_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+
+            android:id="@+id/tv_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x20"
+            android:text="网点：中信银行股份有限公司上海黄浦支行"/>
+        <TextView
+            android:id="@+id/tv_onLine"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x20"
+            android:text="电话：021-63900111"/>
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x20"
+            android:text="地址：上海市西藏南路518号"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_bodyBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_bodyMiddle1"
+        android:layout_marginTop="@dimen/x20">
+
+        <com.usamsl.global.index.step.step6.util.PayRadioGroup
+            android:id="@+id/genderGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            my:orientation="vertical">
+            <!--
+                        <com.usamsl.global.index.step.step6.util.PayRadioPurified
+                            android:id="@+id/pay1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x90"
+                            android:background="@drawable/before_visa_body_item_bg"
+                            my:desc="推荐安装微信5.0及以上版本用户使用"
+                            my:logo1="@drawable/weichat"
+                            my:radio="@drawable/radio"
+                            my:title1="微信支付" />-->
+
+            <com.usamsl.global.index.step.step6.util.PayRadioPurified
+                android:id="@+id/pay2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x90"
+                android:background="@color/White"
+                my:desc="推荐有支付宝账号的用户使用"
+                my:logo1="@drawable/zhifubao"
+                my:radio="@drawable/radio"
+                my:title1="支付宝支付"
+                my:checked="true"
+                />
+        </com.usamsl.global.index.step.step6.util.PayRadioGroup>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_commit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x64"
+        android:layout_below="@id/rl_bodyBottom"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_marginTop="@dimen/x158"
+        android:background="@drawable/before_visa_start_bg2"
+        android:gravity="center"
+        android:text="确认支付"
+        android:textColor="@drawable/button_selector_textcolor"
+        android:textSize="@dimen/x26" />
+</RelativeLayout>

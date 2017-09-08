@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.usamsl.global.index.step.step4.util.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/x62"
+       android:duplicateParentState="true"
+   >
+       <ImageView
+           android:id="@+id/img"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true"
+           android:src="@drawable/contacts_checked"
+           android:layout_marginLeft="@dimen/x30"
+           android:duplicateParentState="true"
+         />
+       <TextView
+           android:id="@+id/tv_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/colorText"
+           android:textSize="@dimen/x24"
+           android:singleLine="true"
+           android:duplicateParentState="true"
+           android:layout_centerVertical="true"
+           android:layout_toRightOf="@id/img"
+           android:layout_marginLeft="@dimen/x6"/>
+   </RelativeLayout>
+</com.usamsl.global.index.step.step4.util.CheckableLinearLayout>

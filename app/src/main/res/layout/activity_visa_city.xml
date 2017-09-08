@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:id="@+id/rl"
+    android:fitsSystemWindows="true"
+    tools:context="com.usamsl.global.index.activity.VisaCityActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x84"
+            android:paddingRight="@dimen/x30"
+            android:background="@drawable/bg_title">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/x30"
+                android:paddingLeft="@dimen/x30"
+                android:src="@drawable/back"
+               />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x64"
+                android:layout_toRightOf="@id/img_back"
+                android:layout_centerVertical="true"
+                >
+                <EditText
+                    android:id="@+id/et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/visa_country_tv_bg"
+                    android:drawableLeft="@drawable/search"
+                    android:drawablePadding="@dimen/x10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x20"
+                    android:hint="中文/拼音"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/x26"
+                    android:maxLength="15"
+                    android:textColorHint="#999999"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/voice"
+                    android:id="@+id/img_voice"
+                    android:layout_gravity="end|center_vertical"
+                    android:paddingRight="@dimen/x20"
+                    android:paddingLeft="@dimen/x20"/>
+            </FrameLayout>
+        </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
+
+    <com.usamsl.global.index.util.SideBar
+        android:id="@+id/side_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rl_top"
+        android:layout_marginTop="@dimen/x36"
+        android:paddingRight="@dimen/x30"
+        android:textColor="#8c8c8c"
+        android:textSize="@dimen/x26" />
+</RelativeLayout>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:fitsSystemWindows="true"
+    tools:context="com.usamsl.global.my.activity.FeedBackActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x84"
+        android:background="@drawable/bg_title">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x30"
+            android:paddingRight="@dimen/x30"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="意见反馈"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/x30" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x30"
+            android:paddingRight="@dimen/x30"
+            android:text="提交"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x26" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_picture"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y238"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_marginTop="@dimen/y10"
+                android:background="@drawable/feed_back_bg"
+                android:paddingBottom="@dimen/y12"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x20"
+                android:paddingTop="@dimen/x12"
+              >
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/tv_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="/3)"
+                        android:textColor="#808080"
+                        android:textSize="@dimen/x26" />
+
+                    <TextView
+                        android:id="@+id/tv_pictureNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_right"
+                        android:text="0"
+                        android:textColor="#bcd78e"
+                        android:textSize="@dimen/x26" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_pictureNum"
+                        android:text="添加图片说明("
+                        android:textColor="#808080"
+                        android:textSize="@dimen/x26" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/rl_num"
+                    android:paddingBottom="@dimen/x12">
+                    <FrameLayout
+                        android:id="@+id/frameLayout1"
+                        android:layout_width="@dimen/x164"
+                        android:layout_height="@dimen/y164"
+                        android:paddingRight="@dimen/x6">
+
+                        <com.usamsl.global.index.util.XCRoundRectImageView
+                            android:id="@+id/img_photo1"
+                            android:layout_width="@dimen/x150"
+                            android:layout_height="@dimen/y150"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="left|bottom"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/add1"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_delete1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:src="@drawable/delete1"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_toRightOf="@id/frameLayout1"
+                        android:id="@+id/frameLayout2"
+                        android:layout_width="@dimen/x164"
+                        android:layout_height="@dimen/y164"
+                        android:paddingRight="@dimen/x6">
+
+                        <com.usamsl.global.index.util.XCRoundRectImageView
+                            android:id="@+id/img_photo2"
+                            android:layout_width="@dimen/x150"
+                            android:layout_height="@dimen/y150"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="left|bottom"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/add1"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_delete2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:src="@drawable/delete1"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_toRightOf="@id/frameLayout2"
+                        android:id="@+id/frameLayout3"
+                        android:layout_width="@dimen/x164"
+                        android:layout_height="@dimen/y164"
+                        android:paddingRight="@dimen/x6">
+
+                        <com.usamsl.global.index.util.XCRoundRectImageView
+                            android:id="@+id/img_photo3"
+                            android:layout_width="@dimen/x150"
+                            android:layout_height="@dimen/y150"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="left|bottom"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/add1"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_delete3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:src="@drawable/delete1"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_below="@id/rl_picture"
+                android:layout_marginBottom="@dimen/y112"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_marginTop="@dimen/y10"
+                android:background="@drawable/feed_back_bg"
+                android:padding="@dimen/x20"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y78"
+                    android:background="@drawable/feed_back_tel_bg">
+
+                    <TextView
+                        android:id="@+id/tv_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="电话："
+                        android:textColor="#808080"
+                        android:textSize="@dimen/x28" />
+
+                    <EditText
+                        android:id="@+id/et_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_tel"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/x28" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/tv_right1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="/500"
+                        android:textColor="#808080"
+                        android:textSize="@dimen/x26" />
+
+                    <TextView
+                        android:id="@+id/tv_wordNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_right1"
+                        android:text="0"
+                        android:textColor="#bcd78e"
+                        android:textSize="@dimen/x26" />
+                </RelativeLayout>
+
+               <EditText
+                    android:id="@+id/et_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   android:layout_above="@id/rl_bottom"
+                   android:layout_below="@id/rl_tel"
+                    android:layout_marginBottom="@dimen/y20"
+                    android:layout_marginTop="@dimen/y20"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="请输入您意见和建议，工作人员将会在第一时间评估处理，感谢您的热心反馈呦~"
+                    android:maxLength="500"
+                    android:textColor="@color/colorText"
+                    android:textColorHint="#cccccc"
+                    android:textSize="@dimen/x28" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

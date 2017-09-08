@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.usamsl.global.service.fragment.VisaQuestionsFragment">
+    <com.usamsl.global.view.MyListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv"
+        android:listSelector="#00000000"
+        android:divider="@color/colorD9"
+        android:dividerHeight="@dimen/x1"
+        android:background="@color/White"/>
+</RelativeLayout>

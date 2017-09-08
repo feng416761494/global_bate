@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x84"
+            android:background="@drawable/bg_title">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x30"
+                android:paddingRight="@dimen/x30"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="身份证"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x30" />
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:text="确定"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x26" />
+
+        </RelativeLayout>
+
+        <com.usamsl.global.view.MyScrollView
+            android:id="@+id/scroollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relTitle"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_marginTop="@dimen/y10"
+                    android:background="@drawable/take_id_card_background">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/take_id_card_background_line">
+
+                        <TextView
+                            android:id="@+id/tvInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginTop="@dimen/y30"
+                            android:text="身份信息"
+                            android:textColor="#595959"
+                            android:textSize="@dimen/x26" />
+
+                        <com.usamsl.global.view.MyGridView
+                            android:id="@+id/gv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvInfo"
+                            android:layout_marginBottom="@dimen/y30"
+                            android:layout_marginTop="@dimen/y30"
+                            android:divider="#00000000"
+                            android:dividerHeight="0dp"
+                            android:listSelector="#00000000"
+                            android:numColumns="2"
+                            android:scrollbars="none" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_pic"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y76"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x20"
+                            android:background="@drawable/take_id_card_background_line"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                style="@style/tvIdCard"
+                                android:text="姓名" />
+
+                            <EditText
+                                android:id="@+id/et_name"
+                                style="@style/etIdCard_new"
+                                android:hint="" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y76"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x20"
+                            android:background="@drawable/take_id_card_background_line"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_sex"
+                                style="@style/tvIdCard"
+                                android:text="性别" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSex"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioButtonWoman"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:drawableLeft="@drawable/contacts_checked"
+                                    android:gravity="center"
+                                    android:text="女" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButtonMan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="20dp"
+                                    android:button="@null"
+                                    android:drawableLeft="@drawable/contacts_checked"
+                                    android:gravity="center"
+                                    android:text="男" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y76"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x20"
+                            android:background="@drawable/take_id_card_background_line"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_folk"
+                                style="@style/tvIdCard"
+                                android:text="民族" />
+
+                            <EditText
+                                android:id="@+id/et_folk"
+                                style="@style/etIdCard_new"
+                                android:hint="" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y76"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x20"
+                            android:background="@drawable/take_id_card_background_line"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_birthday"
+                                style="@style/tvIdCard"
+                                android:layout_weight="1"
+                                android:text="出生日期" />
+
+                            <TextView
+                                android:id="@+id/et_birthday"
+                                style="@style/etIdCard_new" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y76"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x20"
+                            android:background="@drawable/take_id_card_background_line"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_address"
+                                style="@style/tvIdCard"
+                                android:text="住址" />
+
+                            <EditText
+                                android:id="@+id/et_address"
+                                style="@style/etIdCard_new"
+                                android:hint=""
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y76"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x20"
+                            android:background="@drawable/take_id_card_background_line"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_cardno"
+                                style="@style/tvIdCard"
+                                android:text="身份证号" />
+
+                            <EditText
+                                android:id="@+id/et_cardno"
+                                style="@style/etIdCard_new"
+                                android:hint="" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y76"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x20"
+                            android:background="@drawable/take_id_card_background_line"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_issue_authority"
+                                style="@style/tvIdCard"
+                                android:text="签发机关" />
+
+                            <EditText
+                                android:id="@+id/et_issue_authority"
+                                style="@style/etIdCard_new"
+                                android:hint="" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y76"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x20"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_valid_period"
+                                style="@style/tvIdCard"
+                                android:text="有效日期" />
+
+                            <EditText
+                                android:id="@+id/et_valid_period"
+                                style="@style/etIdCard_new" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_text"
+                    android:layout_marginBottom="@dimen/y150"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:layout_marginRight="@dimen/x30"
+                    android:layout_marginTop="@dimen/x20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="温馨提示"
+                        android:textColor="#262626"
+                        android:textSize="@dimen/x24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/x10"
+                        android:layout_marginTop="@dimen/x30"
+                        android:text="·拍摄字体清晰可见不要反光"
+                        android:textColor="#808080"
+                        android:textSize="@dimen/x22" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="·如有错误可点击修改"
+                        android:textColor="#808080"
+                        android:textSize="@dimen/x22" />
+                </LinearLayout>
+            </RelativeLayout>
+        </com.usamsl.global.view.MyScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</RelativeLayout>

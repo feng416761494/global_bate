@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x422"
+    android:id="@+id/framelayout">
+
+    <com.usamsl.global.view.RecyclerImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/img_bg"
+        android:src="@drawable/visa_area_choose_bg"
+        android:scaleType="centerCrop"/>
+    <RelativeLayout
+        android:id="@+id/relativeTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x124">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x84"
+                android:layout_marginTop="@dimen/x45">
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/x30"
+                    android:paddingRight="@dimen/x30"
+                    android:src="@drawable/back3" />
+
+                <TextView
+                    android:id="@+id/tv_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="美国签证"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/x32" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvDoVisaArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_top"
+            android:layout_marginTop="@dimen/y54"
+            android:layout_centerHorizontal="true"
+            android:text="办理领取"
+            android:textSize="@dimen/x30"
+            android:textColor="#ffffff"/>
+        <Gallery
+            android:id="@+id/galleryVisaArea"
+            android:layout_width="@dimen/x250"
+            android:layout_height="@dimen/y45"
+            android:layout_below="@+id/tvDoVisaArea"
+            android:layout_marginTop="@dimen/y32"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:id="@+id/imgBgl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/galleryVisaArea"
+            android:layout_alignTop="@+id/galleryVisaArea"
+            android:src="@drawable/bgl"
+            android:layout_marginTop="3dp"/>
+        <ImageView
+            android:id="@+id/imgBgr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/galleryVisaArea"
+            android:layout_alignTop="@+id/galleryVisaArea"
+            android:src="@drawable/bgr"
+            android:layout_marginTop="3dp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

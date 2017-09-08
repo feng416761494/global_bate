@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/White"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y122"
+        android:background="@drawable/unfinish_order_item_bg"
+        android:paddingLeft="@dimen/x30">
+        <LinearLayout
+            android:id="@+id/linearInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7.5">
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y30"
+                    android:layout_marginTop="@dimen/y15"
+                    android:text="入台证-全国受圣埃蒂安理-含保险水水水水"
+                    android:singleLine="true"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/x24" />
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_type"
+                    android:layout_marginTop="@dimen/y15"
+                    android:layout_marginLeft="@dimen/x28"
+                    android:singleLine="true"
+                    android:text="姓名：楚中天"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/x24" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_alignBottom="@id/tv_type"
+                android:layout_alignParentRight="true"
+                android:gravity="bottom"
+                android:text="取消订单"
+                android:textColor="#bed98f"
+                android:textSize="@dimen/x20"
+                android:paddingRight="@dimen/x10"
+                android:paddingLeft="@dimen/x40"/>
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/unfinish_order_adapter_include" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y62"
+       >
+        <TextView
+            android:id="@+id/tv_paid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="￥139（未付款）"
+            android:textColor="#8d8d8d"
+            android:textSize="@dimen/x20"
+            android:layout_marginLeft="@dimen/x30" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_centerVertical="true"
+            >
+            <TextView
+                android:id="@+id/tv_continue"
+                android:layout_width="@dimen/x96"
+                android:layout_height="@dimen/y48"
+                android:layout_centerVertical="true"
+                android:background="@drawable/order_tv_bg"
+                android:gravity="center"
+                android:text="继续"
+                android:textColor="@drawable/button_selector_textcolor"
+                android:textSize="@dimen/x22"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/x12"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_details"
+                android:layout_width="@dimen/x96"
+                android:layout_height="@dimen/y48"
+                android:layout_toLeftOf="@id/tv_continue"
+                android:layout_centerVertical="true"
+                android:background="@drawable/order_details_tv_bg"
+                android:gravity="center"
+                android:text="继续"
+                android:textColor="@drawable/button_selector_textcolor"
+                android:textSize="@dimen/x22" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

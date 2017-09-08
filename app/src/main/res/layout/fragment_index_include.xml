@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-200dp">
+
+    <TextView
+        android:id="@+id/tv_searchCountry"
+        android:layout_width="@dimen/x552"
+        android:layout_height="@dimen/x66"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x130"
+        android:background="@drawable/index_fragment_rl_bg"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="@dimen/x10"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x20"
+        android:text="签证国家"
+        android:textColor="@color/colorA6"
+        android:textSize="@dimen/x26" />
+
+    <LinearLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y225"
+        android:layout_below="@id/tv_searchCountry"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_marginTop="@dimen/x130"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/x8"
+            android:scaleType="fitXY"
+            android:src="@drawable/fail1"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/img_evus"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x8"
+            android:layout_toRightOf="@id/img1"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner2"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/img_banner3"
+        android:layout_width="@dimen/x660"
+        android:layout_height="@dimen/y316"
+        android:layout_below="@id/relative"
+        android:layout_marginBottom="@dimen/x20"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_marginTop="@dimen/x23"
+        android:src="@drawable/fail2"
+        android:scaleType="fitXY"/>
+
+    <com.usamsl.global.view.MyGridView
+        android:id="@+id/gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_banner3"
+        android:layout_marginBottom="@dimen/x28"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginRight="@dimen/x30"
+        android:columnWidth="@dimen/x208"
+        android:horizontalSpacing="@dimen/x18"
+        android:numColumns="auto_fit"
+        android:listSelector="@null"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/x28" />
+</RelativeLayout>

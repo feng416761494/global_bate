@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="@dimen/x208"
+        android:layout_height="@dimen/y50"
+        android:background="@drawable/index_countrylist_adapter"
+        android:layout_gravity="bottom"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.usamsl.global.index.custom.RoundedImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y206"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/fail"
+            app:riv_corner_radius_bottom_left="0dp"
+            app:riv_corner_radius_bottom_right="0dp"
+            app:riv_corner_radius_top_left="5dp"
+            app:riv_corner_radius_top_right="5dp"
+            app:riv_mutate_background="false" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y46"
+            android:layout_below="@id/img"
+            android:background="@drawable/index_countrylist_adapter"
+            android:layout_alignLeft="@id/img"
+            android:layout_alignRight="@id/img">
+
+            <TextView
+                android:id="@+id/tv_chineseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x10"
+                android:textColor="@color/White"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:id="@+id/tv_englishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_chineseName"
+                android:layout_marginLeft="@dimen/x8"
+                android:layout_toRightOf="@id/tv_chineseName"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/x18" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

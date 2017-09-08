@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".order.fragment.OrderFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x84"
+            android:layout_marginTop="@dimen/x50"
+            android:background="@drawable/bg_title">
+
+            <RadioGroup
+                android:id="@+id/rg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+            <!-- 2017/4/10  需求更改将“已完成”和“未完成”顺序进行调换-->
+                <RadioButton
+                    android:id="@+id/rb_finish"
+                    android:layout_width="@dimen/x128"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x80"
+                    android:background="@drawable/order_rb_bg"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="未完成"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x26" />
+
+                <RadioButton
+                    android:id="@+id/rb_unFinish"
+                    android:layout_width="@dimen/x126"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/order_rb_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="已完成"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x26" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:paddingTop="@dimen/x14" />
+</RelativeLayout>

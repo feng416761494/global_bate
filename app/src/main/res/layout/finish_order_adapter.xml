@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:background="@color/White"
+    android:paddingBottom="@dimen/x18"
+    android:paddingLeft="@dimen/x30"
+
+    >
+
+    <TextView
+        android:paddingTop="@dimen/x18"
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="楚中天"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/x26" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="8dp"
+        android:text="入台证-全国受理"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/x24" />
+
+    <TextView
+        android:id="@+id/tv_orderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_type"
+        android:layout_marginTop="@dimen/x8"
+        android:text="订单编号：RTZ51353"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/x20" />
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="@dimen/x10"
+        android:paddingLeft="@dimen/x10"
+        android:paddingTop="@dimen/x20"
+        android:text="详情"
+        android:textColor="@color/colorFlagship"
+        android:textSize="@dimen/x24"
+        android:paddingRight="@dimen/x30"
+        />
+
+    <TextView
+        android:id="@+id/tv_received"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_orderNumber"
+        android:layout_alignParentRight="true"
+        android:text="已发送至指定网点，请速取"
+        android:textColor="@color/colorFlagship"
+        android:textSize="@dimen/x20"
+        android:paddingRight="@dimen/x30"/>
+</RelativeLayout>

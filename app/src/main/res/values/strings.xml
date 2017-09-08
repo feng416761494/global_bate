@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">百变蜥蜴签证</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- 请替换成在语音云官网申请的appid -->
+    <string name="app_id">586dc433</string>
+
+    <!-- 听写 -->
+    <string name="text_begin">请开始说话…</string>
+    <string name="text_begin_recognizer">开始音频流识别</string>
+    <string name="text_upload_contacts">上传联系人</string>
+    <string name="text_upload_userwords">上传用户词表</string>
+    <string name="text_upload_success">上传成功</string>
+    <string name="text_userword_empty">词表下载失败或内容为空</string>
+    <string name="text_download_success">下载成功</string>
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+    <string name="pref_title_iat_dwa">结果动态修正</string>
+
+    <string-array name="stream_entries">
+        <item>通话</item>
+        <item>系统</item>
+        <item>铃声</item>
+        <item>音乐</item>
+        <item>闹铃</item>
+        <item>通知</item>
+    </string-array>
+    <string-array name="stream_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <!-- 语言 -->
+    <string-array name="language_entries">
+        <item>普通话</item>
+        <item>粤语</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>mandarin</item>
+        <item>cantonese</item>
+        <item>en_us</item>
+    </string-array>
+    <!-- 语音评测 -->
+    <string name="text_en_word">"[word]\napple\nbanana\norange"</string>
+    <string name="text_en_sentence">"The quick brown fox jumps over the lazy dog."</string>
+    <string name="text_cn_syllable">"知，痴，是"</string>
+    <string name="text_cn_word">"磁铁，率领，脆弱，动手，古筝"</string>
+    <string name="text_cn_sentence">"一座座雪峰插入云霄，峰顶银光闪闪，大大小小的湖泊，像颗颗宝石镶嵌在彩带般的沟谷中。"</string>
+    <string name="guide_ava">"你好！我是全球第一款智能签证机器人，我的名字叫Ava。我会为你解答签证时所遇到的问题，专门为您排忧解难，还能为你进行英文翻译，会做职业证明，是你签证必备的小助手~"</string>
+    <string-array name="ise_language_entries">
+        <item>英语</item>
+        <item>汉语</item>
+    </string-array>
+    <string-array name="ise_language_values">
+        <item>en_us</item>
+        <item>zh_cn</item>
+    </string-array>
+    <string-array name="category_entries">
+        <item>单字</item>
+        <item>词语</item>
+        <item>句子</item>
+    </string-array>
+    <string-array name="category_values">
+        <item>read_syllable</item>
+        <item>read_word</item>
+        <item>read_sentence</item>
+    </string-array>
+    <string-array name="result_level_entries">
+        <item>plain</item>
+        <item>complete</item>
+    </string-array>
+    <!-- 标点符号 -->
+    <string-array name="punc_entries">
+        <item>有标点</item>
+        <item>无标点</item>
+    </string-array>
+    <string-array name="punc_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="dwa_entries">
+        <item>开启</item>
+        <item>关闭</item>
+    </string-array>
+    <!--照片机拍照，验证身份证-->
+    <string name="camera_open_error">打开相机失败</string>
+    <string name="import_img">导入图片</string>
+    <string name="take_photo">拍照</string>
+    <string name="loading">正在加载请稍后...</string>
+    <string name="photo_too_lage">图片太大！</string>
+    <string name="no_sdcard">无sdcard！</string>
+    <string name="takephoto_fail">拍照失败</string>
+    <!--所需资料界面-->
+    <string name="beforeVisa_tv1">需要资料</string>
+    <string name="beforeVisa_tv2">签证助手</string>
+    <string name="beforeVisa_tv3">拒签退全款</string>
+    <string name="beforeVisa_tv4">材料易递交</string>
+    <string name="beforeVisa_tv5">所需资料</string>
+    <string name="beforeVisa_tv6">开始签证</string>
+</resources>

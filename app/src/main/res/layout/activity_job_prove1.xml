@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackground"
+    tools:context=".index.step.step5.activity.JobProveActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x84"
+        android:background="@drawable/bg_title"
+        >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x30"
+            android:paddingRight="@dimen/x30"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="在职证明"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x30" />
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="跳过"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x26"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/x30"
+            android:paddingLeft="@dimen/x30"/>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:textSize="@dimen/x18"
+                android:text="如公司有在职证明固定格式可跳过"
+                android:textColor="#7f7f7f"
+                android:gravity="center"
+                />
+            <include layout="@layout/job_prove1_include" />
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="@dimen/x660"
+                android:layout_height="@dimen/x66"
+                android:layout_below="@id/ll"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/x96"
+                android:layout_marginBottom="@dimen/x200"
+                android:background="@drawable/data_commit_bg1"
+                android:gravity="center"
+                android:text="保存并发送至邮箱"
+                android:textColor="@color/White"
+                android:textSize="@dimen/x26" />
+        </RelativeLayout>
+    </ScrollView>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

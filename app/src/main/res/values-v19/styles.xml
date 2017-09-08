@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--沉浸式标题栏-->
+    <style name="styleTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Status Bar -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- Navigation Bar -->
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+    <!--fei沉浸式标题栏-->
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Status Bar -->
+        <item name="android:windowTranslucentStatus">false</item>
+        <!-- Navigation Bar -->
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+    <!--activity滑入滑出从上至下-->
+    <style name="AnimBottomParent" parent="styleTheme">
+        <item name="android:windowEnterAnimation">@anim/activity_open</item>
+        <item name="android:windowExitAnimation">@anim/activity_close</item>
+    </style>
+    <style name="AnimBottom" parent="styleTheme">
+        <item name="android:windowAnimationStyle">@style/AnimBottomParent</item>
+    </style>
+    <style name="evusStyle">
+        <item name="android:windowEnterAnimation">@anim/open</item>
+        <item name="android:windowExitAnimation">@anim/close</item>
+    </style>
+
+    <!-- 动画效果 -->
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/ava_guide_anim</item>
+    </style>
+
+    <style name="AppThemeNew" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Transparent</item>
+        <item name="colorPrimaryDark">@color/Transparent</item>
+        <item name="colorAccent">@color/Transparent</item>
+    </style>
+
+
+</resources>

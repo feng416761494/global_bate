@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_below="@id/tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/y30"
+    android:paddingRight="@dimen/y30">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_fName"
+            style="@style/jobStyle"
+            android:text="姓：" />
+
+        <EditText
+            android:id="@+id/et_fName"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_fName"
+            android:hint="张" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/jobStyle"
+            android:text="名：" />
+
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_name"
+            android:hint="三" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_salary"
+            style="@style/jobStyle"
+            android:text="月薪：" />
+
+        <EditText
+            android:id="@+id/et_salary"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_salary"
+            android:hint="8000元" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_companyName"
+            style="@style/jobStyle"
+            android:text="公司名称：" />
+
+        <EditText
+            android:id="@+id/et_companyName"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_companyName"
+            android:hint="XXX公司" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_companyPosition"
+            style="@style/jobStyle"
+            android:text="公司职位：" />
+
+        <EditText
+            android:id="@+id/et_companyPosition"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_companyPosition"
+            android:hint="设计师" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_companyAddress"
+            style="@style/jobStyle"
+            android:text="单位地址：" />
+
+        <EditText
+            android:id="@+id/et_companyAddress"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_companyAddress"
+            android:hint="国家/省/市/县/街道/单元/室" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_companyTel"
+            style="@style/jobStyle"
+            android:text="单位电话：" />
+
+        <EditText
+            android:id="@+id/et_companyTel"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_companyTel"
+            android:hint="手机/固话"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_fax"
+            style="@style/jobStyle"
+            android:text="公司传真：" />
+
+        <EditText
+            android:id="@+id/et_fax"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_fax"
+            android:hint="8651985125379"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_jobTime"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_jobTimeHint"
+            style="@style/jobStyle"
+            android:text="入职日期：" />
+
+        <TextView
+            android:id="@+id/tv_jobTime"
+            style="@style/jobStyle"
+            android:layout_toRightOf="@+id/tv_jobTimeHint" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_birthDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_birthDateHint"
+            style="@style/jobStyle"
+            android:text="出生日期：" />
+
+        <TextView
+            android:id="@+id/tv_birthDate"
+            style="@style/jobStyle"
+            android:layout_toRightOf="@+id/tv_birthDateHint" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White">
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y60"
+            android:gravity="center_vertical"
+            android:text="您的性别？"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x24" />
+
+        <RadioGroup
+            android:id="@+id/rg_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_sex"
+            android:layout_marginBottom="@dimen/x10"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/x44"
+                android:button="@null"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="男"
+                android:textSize="@dimen/x22" />
+
+            <RadioButton
+                android:id="@+id/rb_women"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="女"
+                android:textSize="@dimen/x22"
+                android:paddingRight="@dimen/x44"
+                />
+        </RadioGroup>
+    </RelativeLayout>
+</LinearLayout>

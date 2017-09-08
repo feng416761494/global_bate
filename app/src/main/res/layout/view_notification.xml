@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff2f5">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:background="#eff2f5">
+        <ImageView
+            android:id="@+id/notifi_icon"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"/>
+        <TextView
+            android:id="@+id/notifi_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/notifi_icon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/notifi_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/notifi_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="09:25"
+            android:textColor="#646464"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/notifi_message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="撒旦哈斯卡杀价到拉萨的啊大神大神带过的给对方对方感到舒服公司法定沟对方公司的风格个"
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/notifi_icon"
+            android:layout_below="@+id/notifi_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#646464"/>
+    </RelativeLayout>
+
+</RelativeLayout>

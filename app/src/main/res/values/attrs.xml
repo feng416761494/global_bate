@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SideBar">
+        <attr name="scaleSize" format="integer"/>
+        <attr name="scaleItemCount" format="integer"/>
+        <attr name="scaleWidth" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="PayRidioButton">
+        <attr name="title1" format="reference|string" />
+        <attr name="logo1" format="reference|color" />
+        <attr name="desc" format="reference|string" />
+        <attr name="checked" format="boolean" />
+        <attr name="radio" format="reference"/>
+    </declare-styleable>
+
+    <!-- Standard orientation constant. -->
+    <attr name="orientation">
+        <!-- Defines an horizontal widget. -->
+        <enum name="horizontal" value="0" />
+        <!-- Defines a vertical widget. -->
+        <enum name="vertical" value="1" />
+    </attr>
+
+    <declare-styleable name="PayRidioGroup">
+        <!-- The id of the child radio button that should be checked by default
+             within this radio group. -->
+        <attr name="checkedButton" format="integer" />
+        <!-- Should the radio group be a column or a row?  Use "horizontal"
+             for a row, "vertical" for a column.  The default is
+             vertical. -->
+        <attr name="orientation" />
+    </declare-styleable>
+    <!--防ios  swith开关-->
+    <declare-styleable name="IOSSwitchView">
+        <attr name="tintColor" format="reference|color" />
+        <attr name="thumbTintColor" format="reference|color" />
+        <attr name="strokeWidth" format="reference|dimension" />
+        <attr name="isOn" format="reference|boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/x30"
+    android:paddingRight="@dimen/x30"
+    android:layout_below="@id/tv">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_education"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y60"
+            android:gravity="center_vertical"
+            android:text="您现在就读的学校为？"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x24" />
+
+        <RadioGroup
+            android:id="@+id/rg_education"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_education"
+            android:layout_marginBottom="@dimen/y10"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_college"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x44"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="大学及以上"
+                android:textSize="@dimen/x22" />
+
+            <RadioButton
+                android:id="@+id/rb_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="中小学"
+                android:textSize="@dimen/x22" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_fName"
+            style="@style/jobStyle"
+            android:text="姓：" />
+
+        <EditText
+            android:id="@+id/et_fName"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_fName"
+            android:hint="张" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/jobStyle"
+            android:text="名：" />
+
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_name"
+            android:hint="三" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_schoolName"
+            style="@style/jobStyle"
+            android:text="学校名称：" />
+
+        <EditText
+            android:id="@+id/et_schoolName"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_schoolName"
+            android:hint="学校全称" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_grade"
+            style="@style/jobStyle"
+            android:text="年级班级：" />
+
+        <EditText
+            android:id="@+id/et_age"
+            style="@style/dateStyle"
+            android:layout_width="@dimen/x70"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_grade"
+            android:hint="1" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            style="@style/jobStyle"
+            android:layout_toRightOf="@id/et_age"
+            android:text="年级" />
+
+        <RelativeLayout
+            android:id="@+id/rl_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_age"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/et_class"
+                style="@style/dateStyle"
+                android:layout_width="@dimen/x70"
+                android:layout_height="wrap_content"
+                android:hint="1" />
+
+            <TextView
+                android:id="@+id/tv_class"
+                style="@style/jobStyle"
+                android:layout_toRightOf="@id/et_class"
+                android:text="班" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_schollTel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_schoolTel"
+            style="@style/jobStyle"
+            android:text="学校电话：" />
+
+        <EditText
+            android:id="@+id/et_schoolTel"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_schoolTel"
+            android:hint="手机/固话"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_birthDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+        <TextView
+            android:id="@+id/tv_birthDateHint"
+            style="@style/jobStyle"
+            android:text="出生日期：" />
+        <TextView
+            android:id="@+id/tv_birthDate"
+            style="@style/jobStyle"
+            android:layout_toRightOf="@+id/tv_birthDateHint"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_outDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/tv_outDateHint"
+            style="@style/jobStyle"
+            android:text="出行日期：" />
+        <TextView
+            android:id="@+id/tv_outDate"
+            android:layout_toRightOf="@id/tv_outDateHint"
+            style="@style/jobStyle"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_startDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_startDateHint"
+            style="@style/jobStyle"
+            android:text="就读日期：" />
+        <TextView
+            android:layout_toRightOf="@id/tv_startDateHint"
+            android:id="@+id/tv_startDate"
+            style="@style/jobStyle"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_returnDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_returnDateHint"
+            style="@style/jobStyle"
+            android:text="返回日期：" />
+        <TextView
+            android:layout_toRightOf="@id/tv_returnDateHint"
+            android:id="@+id/tv_returnDate"
+            style="@style/jobStyle"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_days"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_days"
+            style="@style/jobStyle"
+            android:text="出行天数：" />
+
+        <EditText
+            android:id="@+id/et_days"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_days"
+            android:hint="10"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_student_no"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_student_no"
+            style="@style/jobStyle"
+            android:text="学号：" />
+
+        <EditText
+            android:id="@+id/et_student_no"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_student_no" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_specialty"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_specialty"
+            style="@style/jobStyle"
+            android:text="专业：" />
+
+        <EditText
+            android:id="@+id/et_specialty"
+            style="@style/etStyle"
+            android:layout_toRightOf="@id/tv_specialty" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_contribution"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_contribution"
+            style="@style/jobStyle"
+            android:text="出资方：" />
+
+        <EditText
+            android:id="@+id/et_contribution"
+            style="@style/etStyle"
+            android:hint="父母/个人"
+            android:layout_toRightOf="@id/tv_contribution" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_system_year"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_system_year"
+            style="@style/jobStyle"
+            android:text="学制：" />
+
+        <EditText
+            android:id="@+id/et_system_year"
+            style="@style/dateStyle"
+            android:layout_width="@dimen/x70"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_system_year"
+            android:hint="4" />
+
+        <TextView
+            style="@style/jobStyle"
+            android:layout_toRightOf="@id/et_system_year"
+            android:text="年制" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_college"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_college"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y60"
+            android:gravity="center_vertical"
+            android:text="就读的类别？"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x24" />
+
+        <RadioGroup
+            android:id="@+id/rg_college"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_college"
+            android:layout_marginBottom="@dimen/y10"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_college1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x44"
+                android:button="@null"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="专科"
+                android:textSize="@dimen/x22" />
+
+            <RadioButton
+                android:id="@+id/rb_college2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x44"
+                android:button="@null"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="本科"
+                android:textSize="@dimen/x22" />
+
+            <RadioButton
+                android:id="@+id/rb_college3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="研究生及以上"
+                android:textSize="@dimen/x22" />
+        </RadioGroup>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/contacts_bg">
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y60"
+            android:gravity="center_vertical"
+            android:text="您的性别？"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x24" />
+
+        <RadioGroup
+            android:id="@+id/rg_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_sex"
+            android:layout_marginBottom="@dimen/x10"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/x44"
+                android:button="@null"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="男"
+                android:textSize="@dimen/x22" />
+
+            <RadioButton
+                android:id="@+id/rb_women"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="女"
+                android:textSize="@dimen/x22"
+                android:paddingRight="@dimen/x44"
+                />
+        </RadioGroup>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White">
+
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y60"
+            android:gravity="center_vertical"
+            android:text="父母是否有固定工作？"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x24" />
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_pay"
+            android:layout_marginBottom="@dimen/y10"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x44"
+                android:button="@null"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="是"
+                android:textSize="@dimen/x22" />
+
+            <RadioButton
+                android:id="@+id/rb_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/contacts_checked"
+                android:drawablePadding="@dimen/x6"
+                android:text="否"
+                android:textSize="@dimen/x22" />
+        </RadioGroup>
+    </RelativeLayout>
+</LinearLayout>

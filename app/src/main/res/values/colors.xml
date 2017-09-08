@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- 我的界面和客服界面字体颜色-->
+    <color name="colorText">#3d4038</color>
+    <!--背景色-->
+    <color name="colorBackground">#f7f7f7</color>
+    <!--绿色主打色-->
+    <color name="colorFlagship">#78b200</color>
+    <!--提示字的颜色-->
+    <color name="colorHint">#d9d9d9</color>
+    <!-- 画面背景色 -->
+    <drawable name="layout_backgroud">#000000</drawable>
+
+    <!-- 分割线背景色 -->
+    <drawable name="line_background">#161823</drawable>
+
+    <!-- 控件按下时显示的颜色 -->
+    <color name="list_backgroud_color">#2fb3cb</color>
+    <color name="title_color">#0f8ec5</color>
+    <color name="content_color">#737373</color>
+    <!--提示文字颜色-->
+    <color name="colorLine">#e6e6e6</color>
+    <!--浅绿色-->
+    <color name="colorSecondary">#bcd78e</color>
+    <!--d9d9d9-->
+    <color name="colorD9">#d9d9d9</color>
+    <!--a6a6a6-->
+    <color name="colorA6">#a6a6a6</color>
+    <!--全黑色-->
+    <color name="Black">#000000</color>
+    <!-- 按钮按下是字体的颜色-->
+    <color name="ButtonPressed">#aaaaaa</color>
+    <!-- 白色-->
+    <color name="white">#ffffff</color>
+    <color name="button_login">#92c032</color>
+    <!-- 聊天输入框没有内容，发送按钮的颜色 -->
+    <color name="contentNull">#dddee2</color>
+    <!-- 首页ava介绍时的"知道"按钮颜色-->
+    <color name="ava_guide_confirm">#59f2de</color>
+    <!-- 新登录页面输入框的背景-->
+    <color name="new_login_input_background">#34e1e1e1</color>
+    <!-- 新登录按钮颜色-->
+    <color name="new_login_button_background">#61f0e0</color>
+    <!--半透明-->
+    <color name="banTouMing">#80000000</color>
+    <!--签证页黑体字颜色-->
+    <color name="beforeTextColor">#404040</color>
+    <!--签证详情页灰色字体-->
+    <color name="beforeTextColorGray">#808080</color>
+    <!--f5灰色背景颜色-->
+    <color name="userInfoBackGround">#f5f5f5</color>
+    <!--个人设置页面 字体信息颜色-->
+    <color name="userInfoTextColor">#7f7f7f</color>
+    <!--首页热门国家下方字体背景-->
+    <color name="indexCountryListName">#353a3b</color>
+</resources>

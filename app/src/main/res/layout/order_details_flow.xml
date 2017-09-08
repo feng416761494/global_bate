@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/x10"
+        android:paddingBottom="@dimen/x10">
+
+        <TextView
+            android:id="@+id/tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/order_details_flow_bg1"
+            android:paddingBottom="@dimen/x12"
+            android:paddingLeft="@dimen/x14"
+            android:paddingRight="@dimen/x14"
+            android:paddingTop="@dimen/x12"
+            android:text="照片"
+            android:textColor="@drawable/button_selector_textcolor_login"
+            android:textSize="@dimen/x22" />
+
+        <ImageView
+            android:id="@+id/img_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:paddingBottom="@dimen/y6"
+            android:paddingRight="@dimen/x4"
+            android:src="@drawable/check" />
+    </FrameLayout>
+</RelativeLayout>

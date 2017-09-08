@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.usamsl.global.my.activity.MySettingActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x84"
+            android:background="@drawable/bg_title">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x30"
+                android:paddingRight="@dimen/x30"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="设置"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x30" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@color/White"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x30">
+
+        <include layout="@layout/my_setting_include" />
+        <RelativeLayout
+            android:id="@+id/rl_point"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x82"
+            android:background="@drawable/split_line">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/x26"
+                android:textColor="@color/colorText"
+                android:text="关于我们"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_cache"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x82"
+            android:background="@drawable/split_line"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/x26"
+                android:textColor="@color/colorText"
+                android:text="清除缓存"/>
+            <TextView
+                android:id="@+id/tvCache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x30"
+                android:textSize="@dimen/x26"
+                android:textColor="@color/colorText"
+                android:text=""/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_secret"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x82">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/x26"
+                android:textColor="@color/colorText"
+                android:text="隐私政策" />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y64"
+        android:layout_marginLeft="@dimen/x50"
+        android:layout_marginRight="@dimen/x50"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@drawable/before_visa_start_bg2"
+        android:gravity="center"
+        android:text="注销"
+        android:textColor="@drawable/button_selector_textcolor"
+        android:textSize="@dimen/x26"
+        android:visibility="visible"/>
+</RelativeLayout>

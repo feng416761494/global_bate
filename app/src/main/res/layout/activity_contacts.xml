@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:fitsSystemWindows="true"
+    tools:context=".index.step.step4.activity.ContactsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x84"
+            android:background="@drawable/bg_title"
+            android:paddingRight="@dimen/x30">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x30"
+                android:paddingRight="@dimen/x30"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="基本信息"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/x30" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl_top"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/White"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_old"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/contacts_bg">
+                    <ImageView
+                        android:id="@+id/imgPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/down"/>
+
+                    <TextView
+                        android:id="@+id/tv_contacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x86"
+                        android:layout_toRightOf="@+id/imgPoint"
+                        android:drawablePadding="@dimen/x6"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center_vertical"
+                        android:text="已有签证申请人"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/x26" />
+
+
+                </RelativeLayout>
+                <com.usamsl.global.view.MyListView
+                    android:id="@+id/lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:choiceMode="singleChoice"
+                    android:divider="#e6e6e6"
+                    android:dividerHeight="@dimen/x1"
+                    android:listSelector="#00000000"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x20"
+                    android:background="@color/colorBackground" />
+
+                <include layout="@layout/activity_contacts_include" />
+
+                <TextView
+                    android:id="@+id/tv_commit"
+                    android:layout_width="@dimen/x134"
+                    android:layout_height="@dimen/x54"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/x80"
+                    android:layout_marginTop="@dimen/x96"
+                    android:background="@drawable/data_commit_bg1"
+                    android:gravity="center"
+                    android:text="提交"
+                    android:textColor="@drawable/button_selector_textcolor"
+                    android:textSize="@dimen/x26" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</FrameLayout>

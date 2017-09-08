@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    tools:context=".index.step.step2.activity.BeforeVisaActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x84"
+        android:background="@drawable/bg_title"
+        android:paddingRight="@dimen/x30">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/x30"
+            android:paddingLeft="@dimen/x30"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="签证详情"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/x32" />
+
+        <TextView
+            android:id="@+id/tv_help"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/beforeVisa_tv2"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/x26" />
+    </RelativeLayout>
+
+    <com.usamsl.global.index.step.step2.custom.MyScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        android:scrollbars="none"
+        android:layout_above="@+id/includeBottomStar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/before_visa_include_top"/>
+
+            <RelativeLayout
+                android:id="@+id/relative01"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y88"
+                android:layout_below="@+id/rl_body"
+                android:background="@drawable/bg_title">
+                <ImageView
+                    android:id="@+id/imgShadow_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/shadow"/>
+                <ImageView
+                    android:id="@+id/imgShadow_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/shadow_left"
+                    android:visibility="invisible"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lsvContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/imgShadow_left"
+                    android:layout_toLeftOf="@+id/imgShadow_right"
+                    android:background="@drawable/bg_title"/>
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/imgLine1"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_below="@+id/relative01"
+                android:background="#e6e6e6"
+                android:visibility="gone"/>
+            <include layout="@layout/before_visa_include_body"
+                android:id="@+id/includeBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgLine1"/>
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y20"
+                android:background="#f5f5f5"
+                android:layout_below="@+id/includeBody"/>
+            <include layout="@layout/before_visa_basicinfo"
+                android:id="@+id/includeBasic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"/>
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y20"
+                android:background="#f5f5f5"
+                android:layout_below="@+id/includeBasic"/>
+            <include layout="@layout/before_visa_include_process"
+                android:id="@+id/includeProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2"
+                android:layout_marginTop="@dimen/y20"
+                android:layout_marginBottom="@dimen/y40"/>
+        </RelativeLayout>
+    </com.usamsl.global.index.step.step2.custom.MyScrollView>
+
+    <include layout="@layout/before_visa_bottom_start"
+        android:id="@+id/includeBottomStar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y88"
+        android:layout_alignParentBottom="true"/>
+    <RelativeLayout
+        android:id="@+id/relative02"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y88"
+        android:layout_below="@+id/rl_top">
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="@dimen/x184"
+        android:layout_height="@dimen/y184">
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="@dimen/x172"
+            android:layout_height="@dimen/y172"
+            android:layout_gravity="bottom|left">
+            <com.usamsl.global.index.util.XCRoundRectImageView
+                android:id="@+id/img_photo"
+                android:layout_width="@dimen/x172"
+                android:layout_height="@dimen/y172"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:src="@drawable/fail"
+                android:scaleType="centerInside"
+                />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_delete"
+            android:src="@drawable/delete"
+            android:layout_gravity="right"
+            android:visibility="visible"/>
+    </FrameLayout>
+</RelativeLayout>

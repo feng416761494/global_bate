@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y82"
+    xmlns:coolswitch="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="@drawable/split_line">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x4"
+            android:text="勿扰模式"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/x26" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"
+            android:text="将无法收到系统通知"
+            android:textColor="#a6a6a6"
+            android:textSize="@dimen/x18"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/x98"
+        android:layout_height="@dimen/x60"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x30">
+
+        <com.usamsl.global.my.util.IOSSwitchView
+            android:id="@+id/coolSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:thumbTintColor="#d9d9d9"
+            app:tintColor="#78b200"/>
+    </LinearLayout>
+</RelativeLayout>

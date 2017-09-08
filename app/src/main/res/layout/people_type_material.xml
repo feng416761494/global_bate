@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x18"
+        android:paddingRight="@dimen/x18"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginRight="@dimen/x30"
+        >
+        <TextView
+            android:id="@+id/tv_material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/x24"
+            android:textColor="@color/colorText"
+            />
+        <com.usamsl.global.view.MyListView
+            android:layout_below="@id/tv_material"
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:divider="#00000000"
+            android:dividerHeight="@dimen/x2"
+            android:listSelector="#00000000"
+            />
+    </RelativeLayout>
+</RelativeLayout>

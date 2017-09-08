@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/relBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y88"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:background="#e6e6e6"/>
+        <RelativeLayout
+            android:id="@+id/relativeCallPhone"
+            android:layout_width="@dimen/x126"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imgCallPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/y14"
+                android:src="@drawable/phone"/>
+            <TextView
+                android:id="@+id/tvCallPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/y10"
+                android:text="咨询"
+                android:textSize="@dimen/x18"
+                android:textColor="#808080"/>
+            <ImageView
+                android:layout_width="@dimen/x1"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#e6e6e6"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/relativeCallPhone"
+            android:text="开始签证"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:background="#c3da9c"/>
+    </RelativeLayout>
+
+</RelativeLayout>

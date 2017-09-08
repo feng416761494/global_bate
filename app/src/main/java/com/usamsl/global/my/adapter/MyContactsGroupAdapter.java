@@ -1,0 +1,65 @@
+package com.usamsl.global.my.adapter;
+
+import android.content.Context;
+import android.graphics.Color;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+import com.usamsl.global.R;
+import com.usamsl.global.my.entity.MyGroup;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2016/12/29.
+ * 描述：我的联系人：移动到分组
+ */
+public class MyContactsGroupAdapter extends BaseAdapter {
+    //上下文
+    private Context mContext;
+    //显示的好友分组国家集合
+    private List<MyGroup.ResultBean> mData;
+
+    public MyContactsGroupAdapter(Context mContext, List<MyGroup.ResultBean> mData) {
+        this.mContext = mContext;
+        this.mData = mData;
+    }
+
+    @Override
+    public int getCount() {
+        return mData.size();
+    }
+
+    @Override
+    public Object getItem(int i) {
+        return mData.get(i);
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return i;
+    }
+
+    @Override
+    public View getView(int i, View view, ViewGroup viewGroup) {
+        ViewHolder viewHolder;
+        MyGroup.ResultBean group = mData.get(i);
+        if (view == null) {
+            view = LayoutInflater.from(mContext).inflate(R.layout.my_contacts_parent, null);
+            viewHolder = new ViewHolder();
+            viewHolder.name = (TextView) view.findViewById(R.id.tv_parent);
+            view.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) view.getTag();
+        }
+        viewHolder.name.setText(group.getGroup_name());
+        return view;
+    }
+
+    class ViewHolder {
+        //分组名
+        TextView name;
+    }
+}

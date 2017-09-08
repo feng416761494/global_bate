@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_bg"
+        android:layout_marginLeft="@dimen/x90"
+        android:layout_marginRight="@dimen/x90">
+        <EditText
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_marginRight="@dimen/x40"
+            android:id="@+id/edit_modify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x108"
+            android:text="组名称"
+            android:textSize="@dimen/x28"
+            android:textColor="@color/colorText"
+            android:background="@null" />
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x72"
+            android:text="确定"
+            android:textSize="@dimen/x28"
+            android:textColor="@color/White"
+            android:background="@drawable/dialog_btn_bg"
+            />
+    </LinearLayout>
+</RelativeLayout>

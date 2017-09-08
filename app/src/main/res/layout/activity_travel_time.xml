@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    tools:context=".index.step.step4.activity.TravelTimeActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:background="@drawable/bg_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x84"
+           >
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x30"
+                android:paddingRight="@dimen/x40"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="出行时间"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/x30" />
+        </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@color/White"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20">
+            <com.usamsl.global.view.MyCalendarView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/x32"
+                android:paddingRight="@dimen/x32"
+                android:layout_marginBottom="@dimen/x140"
+                android:scrollbarStyle="outsideOverlay"
+                android:clipToPadding="false"
+                app:tsquare_dividerColor="@color/White"
+                app:tsquare_titleTextColor="@color/colorText"
+                app:tsquare_headerTextColor="@color/colorFlagship"
+                />
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x120"
+        android:layout_alignParentBottom="true"
+        android:background="@color/White">
+        <RelativeLayout
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/x50"
+            android:paddingRight="@dimen/x50">
+            <TextView
+                android:layout_width="@dimen/x134"
+                android:layout_height="@dimen/x54"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/data_commit_bg1"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/White"
+                android:textSize="@dimen/x26"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

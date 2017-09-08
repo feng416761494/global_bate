@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvCustType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="在职人员"
+            android:gravity="center"
+            android:textSize="@dimen/x28"
+            android:textColor="#404040"
+            android:layout_marginRight="@dimen/x66"/>
+        <ImageView
+            android:id="@+id/imgBottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y4"
+            android:layout_alignLeft="@+id/tvCustType"
+            android:layout_alignRight="@+id/tvCustType"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorSecondary"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

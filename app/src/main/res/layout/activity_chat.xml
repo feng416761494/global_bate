@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true"
+    tools:context=".service.activity.ChatActivity_old">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y84"
+        android:background="@drawable/bg_title">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x30"
+            android:paddingRight="@dimen/x30"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_visaHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="美洲签证"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x30" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relSend"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x96"
+        android:background="@drawable/chat_et_bg"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/x8">
+
+        <TextView
+            android:id="@+id/tvSend"
+            android:layout_width="@dimen/x96"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/x8"
+            android:background="@drawable/bg_send"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x12"
+            android:paddingTop="@dimen/x12"
+            android:text="发送"
+            android:textColor="@color/White"
+            android:textSize="@dimen/x24"
+            />
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/x8"
+            android:layout_toLeftOf="@id/tvSend"
+            android:background="@drawable/bg_et"
+            android:paddingLeft="@dimen/x8"
+            android:textSize="@dimen/x28" />
+    </RelativeLayout>
+
+        <com.baoyz.widget.PullRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_top"
+            android:layout_above="@+id/relSend">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recylerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.baoyz.widget.PullRefreshLayout>
+</RelativeLayout>

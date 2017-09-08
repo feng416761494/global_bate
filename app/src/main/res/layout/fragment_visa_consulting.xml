@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    tools:context="com.usamsl.global.service.fragment.VisaConsultingFragment">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="签证咨询"
+        android:textSize="@dimen/x26"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/x40"/>
+    <com.usamsl.global.view.MyGridView
+        android:id="@+id/gv"
+        android:layout_below="@id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:columnWidth="@dimen/x180"
+        android:verticalSpacing="@dimen/x20"
+        android:numColumns="5"
+        android:scrollbars="none"
+        android:focusable="false"
+        android:listSelector="@null"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
