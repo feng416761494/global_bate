@@ -158,6 +158,7 @@ public class IndexFragment extends Fragment implements AMapLocationListener,View
         tv_searchCountry.setOnClickListener(this);
         rl_searchCity.setOnClickListener(this);
         img_evus.setOnClickListener(this);
+        Toast.makeText(getActivity(), "我们昨晚地震了！！！", Toast.LENGTH_SHORT).show();
     }
 
     @Override
